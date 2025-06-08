@@ -1,0 +1,600 @@
+* {
+    /* outline: 1px solid red;     Pro osobni kontrolu boxu a podobne */
+    box-sizing: border-box;
+}
+
+:root {
+    --pozadi1: #33292a; /* What we do barva z odkazu*/
+    --pozadi2: #644b4f; /* Where do you want to go barva z odkazu*/
+    --pozadi3: #f2f2f2; /* Our Trips container a button barva z odkazu*/
+    --pozadi4: #333333; /* Footer barva containeru z odkazu*/
+    --odkaz: #efa69d;
+    --odkaz-hover: #f2f2f2; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cely-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Nastaveni navigace */
+
+#hamburger {
+    width: 50px;
+    height: 50px;
+    background-color: var(--pozadi1);
+    border: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav  {
+    
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--pozadi1);
+    
+}
+
+nav ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0; 
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;  
+}
+nav li a:hover {
+    color: var(--odkaz);
+}
+
+
+/*       Header Hero sekce        */
+
+header {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+
+.hero {
+    max-width: 100%;
+    height: calc(100vh - 50px);
+    background-image: url(./Projekt/images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+h1 span {
+    display: flex;
+    justify-content: right;
+}
+
+h1 {
+    width: 85%;
+    position: absolute;
+    bottom: 60px;
+    color: white;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+/*        NASTAVENI SECTION CONTAINERU             */
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    
+}
+
+.section-last {
+    padding-bottom: 0;
+}
+/*        NASTAVENI SECTION CONTAINERU             */
+
+/*        Section about-us        */
+
+.about-us {
+    display: flex;
+    gap: 20px;
+    max-width: 70%;
+    justify-content: space-between;  
+}
+
+.about-us-text {
+    max-width: 50%;
+}
+
+.about-us-obrazek {
+    width: 50%;
+    height: 100%;
+    background-image: url(./Projekt/images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+}
+.about-us-text h2 {
+    font-weight: 900;
+    text-shadow: gray 5px 5px 5px;  
+}
+
+/*        Section What We Do        */
+
+.what-we-do {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    background-color: var(--pozadi1);
+}
+.what-we-do-text {
+    max-width: 70%;
+}
+.what-we-do h2 {
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    text-shadow: white 5px 5px 5px;  
+}
+.what-we-do p {
+    text-align: center;
+    color: white;
+}
+
+/* WWD obrazky */
+
+/* .what-we-do-obrazky je hlavni container vsech 4 obrazku */
+.what-we-do-obrazky {
+    display: flex;
+    width: 70%;
+    margin-top: 50px;
+}
+/* .WWD-container je container Obrazku paragrafu pod nim */
+.WWD-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.WWD-container p {
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+/* .WWD definuje vsechny 4 obrazky, jejich containery */
+.WWD {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.WWD1 {
+    
+    background-image: url(./Projekt/png-icons-white/hiking-white.png);
+}
+.WWD2 {
+    background-image: url(./Projekt/png-icons-white/cycle-white.png);
+}
+.WWD3 {
+    background-image: url(./Projekt/png-icons-white/water-white.png);
+}
+.WWD4 {
+    background-image: url(./Projekt/png-icons-white/car-white.png);
+}
+
+/*          Section Grid-container           */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sloupce */
+  grid-template-rows: repeat(3, 1fr);    /* 3 řádky */
+  gap: 20px;
+  max-width: 70%;
+}
+
+.grid-container img  {
+    max-width: 100%;
+    max-height: 222px;
+    aspect-ratio: 4/3;        /* MUST HAVE pro zachovani rozmeru obrazku pri zmene velikosti okna*/
+    object-fit: cover;        /* orizne obrazek, zachova ramecek */
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.grid-container img:hover {
+    transform: scale(1.2);
+
+}
+.trip {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 222px;      
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-weight: 700;
+    font-size: 32px;
+    background-color: var(--pozadi3);
+}
+.trip p {
+    margin: 0;
+}
+
+/*      WDYWTG SEKCE     */
+
+.WDYWTG {
+    max-width: 100%;
+    background-color: var(--pozadi2);
+}
+
+.WDYWTG-container {
+    display: flex;
+    width: 70%;
+    padding: 60px 0;
+    gap: 30px;
+}
+
+.WDYWTG-otazka {
+   max-width: 30%;
+   color: white;
+
+}
+.WDYWTG-otazka h3 {
+    font-size: 32px;
+    text-shadow: white 5px 5px 5px;  
+}
+
+.WDYWTG-text {
+    max-width: 70%;
+    color: white;
+}
+
+
+.WDYWTG-button {
+    display: flex;
+    width: 133px;
+    height: 43px;
+    margin-top: 50px;
+    background-color: var(--pozadi3);
+    font-weight: 700;
+    border-radius: 5px;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.WDYWTG-button:active {
+  transform: scale(0.95);
+}
+
+
+
+
+.WDYWTG-button a {
+    flex-wrap: wrap;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100%;  
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.WDYWTG-button:hover {
+  transform: scale(1.1);
+  background-color: #d6d6d6;
+}
+
+/*          Sekce Reviews            */
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 20px; 
+}
+
+.reviews-container1 {
+    text-align: center;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.reviews-container1 h2 {
+    text-shadow: grey 5px 5px 5px;  
+}
+
+.reviews-container2   {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews-odstavec {
+    max-width: 45%;
+    text-align: center;
+    margin: 30px auto;
+    padding-top: 20px;
+}
+
+.reviews-obrazek1 {
+    max-width: 120px;
+    max-height: 120px;
+    aspect-ratio: 1 / 1;
+    background-image: url(./Projekt/images/kalen-emsley-kGSapVfg8Kw-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.reviews-obrazek2 {
+    max-width: 120px;
+    max-height: 120px;
+    aspect-ratio: 1 / 1;
+    background-image: url(./Projekt/images/jeffrey-keenan-pUhxoSapPFA-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.jmena {
+    font-weight: 700;
+} 
+
+/*          Sekce obrazky4           */
+
+.obrazky4-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    object-fit: cover;
+}
+
+.obrazky4-container img {
+    width: 50%;
+}
+
+/*               FOOTER               */
+
+footer {
+    width: 100%;
+    background-color: var(--pozadi4);
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+}
+.footer-container a {
+    color: var(--odkaz);
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-container a:hover {
+    color: var(--odkaz-hover);
+}
+
+.footer-container p {
+    font-size: 10px;
+    color: white;
+}
+/* Video */
+
+.video {
+    padding: 0;
+}
+video {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* JS nastaveni */
+
+.hover-word {
+    display: inline;
+    white-space: pre; /* zachová mezery mezi slovy */
+    transition: color 0.2s ease;
+    
+}
+
+.hover-word.hover-red {
+    color: red;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+
+
+/*          MEDIA QUERRY            */
+
+
+@media (max-width: 768px) {
+    video {
+        display: none;              /* skryje video pro mobily kvuli datum, maybe dobry dunno*/
+    }
+    .about-us {
+        flex-direction: column;
+    }
+    .about-us-obrazek {
+        height: 220px;
+        width: 100%;
+        background-position: center 80%;
+    }
+    .about-us-text {
+        max-width: 100%;
+    }
+    .what-we-do-obrazky {
+        flex-direction: column;
+    }
+    
+    .grid-container {   
+        display: grid; 
+        grid-template-rows: minmax(100px, auto); /*9 sloupců musi byt tento minamx zapis, jinak mi trip neudrzi svou vysku a ma pod sebou mezeru i pres nastaveni 80px*/ 
+        grid-template-columns: 1fr; /* 1 řádek */ 
+        gap: 20px; 
+        max-width: 100%; /* celá šířka containeru */ 
+        padding: 0 20px;
+    }
+
+    .grid-container img {
+        max-height: 100%;
+    }
+
+    .grid-container .trip {
+        height: 80px; 
+    } 
+    
+    .WDYWTG-container {
+        flex-direction: column;
+    }
+    .WDYWTG-otazka {
+    max-width: 100%;
+    }
+    .WDYWTG-text {
+        max-width: 100%;
+    }
+    .reviews-container1{
+        max-width: 100%;
+    }
+    .reviews-container2 {
+        flex-direction: column;
+    }
+    .reviews-odstavec {
+        max-width: 100%;
+    }
+
+    .obrazky4-container {
+        flex-direction: column;
+    }
+    .obrazky4-container img {
+        width: 100%;
+    }
+}    
+
+@media (max-width: 992px) {
+    nav ul {
+        display: none;              /* skryje mi to ul, aby mi nezavazela pri pozicovani hamburgeru*/
+    }
+    
+    nav {                               
+        justify-content: right;
+        position: relative;     /* posune hamburger doprava*/
+    }
+
+    /* Styl pro skryté menu */
+    .menu {
+        position: absolute;
+        right: 60px;
+        top: 33px;
+        display: none;
+        list-style-type: none;
+        padding: 10px 10px;
+        max-width: 360px;
+        text-align: center;
+        z-index: 1;
+        background-color: var(--pozadi1);
+        border: 1px solid white;
+        border-radius: 8px;  
+    }
+    
+    .menu li:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* jemný pruhledny efekt */
+    }
+
+    li:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    li a {
+        font-size: 20px;
+    }
+
+    /* Když má tlačítko aktivní třídu, zobrazí se menu */
+    .menu-toggle.active + .menu {
+        display: block;
+    }
+    .menu-toggle img:hover {
+        margin: 5px;
+    }
+    .menu-toggle img {
+        transition: transform 0.3s ease;
+
+    }
+    .menu-toggle.active img {
+      transform: rotate(90deg);
+      
+    }
+    /* .hidden pro JavaScript musi byt zde v media querry, jinak mi to zneviditelni klasickou navigaci
+    pri vyssim rozliseni a musim pridavat dalsi nastaveni .menu pro jine rozliseni, za me jednodusi varianta*/
+    .hidden {
+    animation: fadeOut 0.3s ease-out;
+    opacity: 0;
+}
+
+
+}
+
+@media (min-width: 992px)  {
+    #hamburger {
+        display: none;           /* skryje hamburger na desktop*/
+    }
+    
+}
+
+
+
+
+

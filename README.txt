@@ -1,0 +1,2 @@
+Pro pripadnou kontrolu textu a věci na webovce pomoci inspect funkce prohlizecu, doporucuji vypnout první cast javascriptu, co meni barvu pisma na které najedete mysi. Meni kazde slovo na span, který zbarvi :)))
+Hral jsem si, a vypadalo to zajimave.
