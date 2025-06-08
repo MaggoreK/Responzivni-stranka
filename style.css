@@ -492,6 +492,9 @@ video {
     .grid-container img {
         max-height: 100%;
     }
+    .grid-container img:hover {
+    transform: none;
+    }
 
     .grid-container .trip {
         height: 80px; 
